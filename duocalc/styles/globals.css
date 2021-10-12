@@ -1,4 +1,17 @@
-* {
+:root {
+    --white:#fff;
+    --background: #F2F3F5;
+    --gray-line: #707070;
+    --text: #666666;
+    --text-highlight: #B3B9FF;
+    --title: #2E384D; --red: #E83F5B;
+    --green: #4CD62B; --blue: #5965E0;
+    --blue-dark: #4953B8;
+    --blue-twitter: #2AA9E0;
+    
+    }
+    
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

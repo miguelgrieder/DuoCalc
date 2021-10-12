@@ -1,8 +1,22 @@
 .tituloContainer{
     background: white;
     position: center;
-    color: green;
+    
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-bottom: 2px solid var(--blue-dark);
+    margin-bottom: 5%;
+}
+.tituloContainer > h1{
+    color: var(--blue-dark);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.tituloContainer > div{
+    color: var(--blue-twitter);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2%;
 }

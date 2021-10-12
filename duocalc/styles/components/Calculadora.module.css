@@ -1,3 +1,58 @@
 .calculadoraContainer{
-color: grey;
+    padding: 10%;
+    align-items: center;
+    text-align: justify;
+    margin: 0%;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding-top: 3%;}
+    
+
+    
+.calculadoraContainer > h1 {
+    font-family: 'Lucida Sans', 'sans-serif';
+    margin: 0% 4% 4% 4%;
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 4%;
+    color: var(--blue-twitter);
+    border-bottom: 2px solid var(--blue-dark);
+
+    }
+
+.calculadoraContainer > h2 {
+    font-size: 1.5rem;
+    font-weight: 400;}
+
+    
+.calculadoraContainer > input{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 80%;
+    height: 3rem;
+    margin: 5% 10% 0% 10%;
+    border-radius: 5px;
+}
+
+.calculadoraContainer > button{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    height: 3rem;
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+    border-radius: 5px;
+    background: var(--blue);
+    color: var(--white);
+    transition: 0.2s;
+}
+
+.calculadoraContainer > div{
+    font-size: 1.25rem;
+}
+
+.calculadoraContainer > button:hover{
+    background: var(--blue-dark);
 }

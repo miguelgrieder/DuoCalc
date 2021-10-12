@@ -4,9 +4,19 @@ interface CalculadoraProviderProps {
     children: ReactNode
 }
 
-export const CalculadoraContext = createContext({});
+interface CalculadoraContextData{
+    calcular: () => void;
+}
+
+export const CalculadoraContext = createContext({} as CalculadoraContextData);
 
 
 export function CalculadoraProvider({children}: CalculadoraProviderProps) {
-    const experienceToNextLevel = Math.pow((level + 1) * 4,2);
+    function calcular() {
+        console.log('calcular');
+    }
+    return(
+        <CalculadoraContext.Provider value={{calcular}}>
+            {children}
+        </CalculadoraContext.Provider>)
 }

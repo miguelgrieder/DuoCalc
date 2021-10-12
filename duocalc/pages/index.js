@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>DuoCalca</title>
+        <title>DuoCalc</title>
       </Head>
 
       <Titulo/>

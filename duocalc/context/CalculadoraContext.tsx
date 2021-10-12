@@ -5,15 +5,15 @@ interface CalculadoraProviderProps {
 }
 
 interface CalculadoraContextData{
-    calcular: () => void;
+    calcular: (num) => void;
 }
 
 export const CalculadoraContext = createContext({} as CalculadoraContextData);
 
 
 export function CalculadoraProvider({children}: CalculadoraProviderProps) {
-    function calcular() {
-        console.log('calcular');
+    function calcular(num) {
+        console.log('calcular', num);
     }
     return(
         <CalculadoraContext.Provider value={{calcular}}>

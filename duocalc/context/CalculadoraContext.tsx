@@ -39,38 +39,34 @@ export function CalculadoraProvider({children}: CalculadoraProviderProps) {
 
         function verificadorDoisDigitos(valor, i){
             const arrayAlgarismos = (valor*i).toString().split('');
-            console.log(arrayAlgarismos, valor, i)     
-
+            console.log(arrayAlgarismos, valor, i)
             
-            if(i>10){
+                
+                if(i>100){
                     return true
-                };
+                }else{return false}; 
+            
         }
+        
         var timer_fim = Date.now()
-        const timer =  timer_fim -timer_inicio
+        const timer =  (timer_fim -timer_inicio)+1;
         const duodigito = valor*i;
-        setValor(valor)
-        setDuodigito(duodigito)
-        setTimer(timer)
+        setValor(valor);
+        setDuodigito(duodigito);
+        setTimer(timer);
 
         exibir_resposta()}
         
 
-    function exibir_resposta(){
-        if(jaCalculou==false){
-           setListaHistoricos(listaHistoricos.pop())
-        };
-        setJaCalculou(true);
-        cria_historico();
-    }
 
-    function cria_historico(){
-        
+
+    function exibir_resposta(){
         var size = listaHistoricos.unshift(<div>Menor duodigito de {valor}: {duodigito}. Cálculo: {timer} milésimos.</div>)
-        if(size>3){
+        if(size>4){
             listaHistoricos.pop()
         };
         setListaHistoricos(listaHistoricos)
+        setJaCalculou(true);
     }
 
     return(

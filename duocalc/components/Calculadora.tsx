@@ -5,7 +5,7 @@ import { useContext } from 'react';
 
 
 export function Calculadora() {
-    const {calcular, duodigito, valor, timer} = useContext(CalculadoraContext)
+    const {calcular, duodigito, valor, timer, jaCalculou} = useContext(CalculadoraContext)
 
     function getInput() {
         const input_data = document.querySelector('input').value;
@@ -23,11 +23,15 @@ export function Calculadora() {
             <button type="button" className={`${styles.calcularButton} `}  onClick={getInput}>
                 Calcular
             </button>
-            <div> O menor duodigito multiplo de {valor} é {duodigito}</div>
-            <div>Tempo para calculo: {timer} milesimos</div>
-        <script>
+            
+            { jaCalculou ? (
+                <div>
+            <div> O menor duodigito múltiplo de {valor} é {duodigito}.</div>
+            <div>Tempo para cálculo: {timer} milésimos.</div></div>):
+            (<div>Calcule para exibir os dados!</div>)}
         
-        </script>
+            
+
     </div>
     </div>
     );

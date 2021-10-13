@@ -3,13 +3,15 @@ import styles from '../styles/components/Calculadora.module.css';
 import { useContext } from 'react';
 
 
-export function Calculadora() {
-    const {calcular} = useContext(CalculadoraContext)
 
-    function getNum() {
-        const num = document.querySelector('input').value;
-        if (num > 100) {
-        calcular(num)}
+export function Calculadora() {
+    const {calcular, duodigito, valor, timer} = useContext(CalculadoraContext)
+
+    function getInput() {
+        const input_data = document.querySelector('input').value;
+        const valorr = parseInt(input_data);
+        if (valorr > 100) {
+        calcular(valorr)}
     }
 
     return(
@@ -18,11 +20,11 @@ export function Calculadora() {
         <h1> Calculadora</h1>
             <h2>Escreva um número maior que 100:</h2>
             <input type="text" placeholder="digite"/>
-            <button type="button" className={`${styles.calcularButton} `}  onClick={getNum}>
+            <button type="button" className={`${styles.calcularButton} `}  onClick={getInput}>
                 Calcular
             </button>
-            <div> O menor duodigito multiplo de x é y</div>
-            <div>Tempo para calculo: 32 milesimos</div>
+            <div> O menor duodigito multiplo de {valor} é {duodigito}</div>
+            <div>Tempo para calculo: {timer} milesimos</div>
         <script>
         
         </script>

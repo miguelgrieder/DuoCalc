@@ -17,7 +17,7 @@ export function Calculadora() {
     return(
         <div>
     <div className= {styles.calculadoraContainer}> 
-        <h1> Calculadora</h1>
+        <h1>Calculadora</h1>
             <h2>Escreva um número maior que 100:</h2>
             <input type="number" placeholder="digite"/>
             <button type="button" className={`${styles.calcularButton} `}  onClick={getInput}>

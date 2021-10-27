@@ -10,8 +10,9 @@ export function Historico() {
     return(
     <div className= {styles.historicoContainer}> 
         <h1>Histórico</h1>
-        
+
         {jaCalculou ? (
+            
         <><h3>Número total de operações: {operacoes}</h3>
         <h2>Operações Passadas:</h2>
         <div>{listaHistoricos}

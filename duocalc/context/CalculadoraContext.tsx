@@ -30,6 +30,7 @@ export function CalculadoraProvider({children}: CalculadoraProviderProps) {
 
     function calcular(valor) {
         var timer_inicio = Date.now()
+        
         var valor_string = valor.toString();
         var i = 1;
         var jaEncontrou = false;

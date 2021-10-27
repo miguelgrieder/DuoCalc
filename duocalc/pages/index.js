@@ -14,15 +14,14 @@ export default function Home() {
       </Head>
 
       <Titulo/>
-      <section> <div>
-      <Calculadora/>
-
-      </div>
-      <Historico/>
-
-      <div>
-
-      </div> </section>
+      <section>
+         <div>
+          <Calculadora/>
+         </div>
+          <div>
+            <Historico/>
+          </div> 
+      </section>
       
     </div>
   )

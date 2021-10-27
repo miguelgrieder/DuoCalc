@@ -4,8 +4,10 @@
     text-align: justify;
     margin: 0%;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    padding-top: 3%;}
+    border-radius: 15px;
+    padding-top: 3%;
+    background: var(--white);
+    height: 25rem;}
     
 
     
@@ -27,7 +29,7 @@
 
     
 .calculadoraContainer > input{
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 600;
     text-align: center;
     width: 80%;
@@ -37,7 +39,7 @@
 }
 
 .calculadoraContainer > button{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     text-align: center;
     height: 3rem;
@@ -47,6 +49,7 @@
     background: var(--blue);
     color: var(--white);
     transition: 0.2s;
+    border: 0;
 }
 
 .calculadoraContainer > div{

@@ -5,8 +5,10 @@
     text-align: justify;
     margin: 0%;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    padding-top: 3%;}
+    border-radius: 15px;
+    padding-top: 3%;
+    background: var(--white);
+    height: 25rem;}
 
 
     
@@ -30,3 +32,8 @@
     margin: 4%;
     font-size: 1rem;
 }
+
+.historicoContainer > h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 4%;}

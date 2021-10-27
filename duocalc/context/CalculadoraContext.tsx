@@ -10,6 +10,7 @@ interface CalculadoraContextData{
     calcular: (num) => void;
     duodigito: number;
     timer: number;
+    operacoes: number;
     valor: number;
     jaCalculou: boolean;
     listaHistoricos: any;
@@ -20,6 +21,7 @@ export const CalculadoraContext = createContext({} as CalculadoraContextData);
 
 export function CalculadoraProvider({children}: CalculadoraProviderProps) {
     const [valor, setValor] = useState(0);
+    const [operacoes, setOperacoes] = useState(0);
     const [duodigito, setDuodigito] = useState(0);
     const [timer, setTimer] = useState(0);
     const [jaCalculou, setJaCalculou] = useState(false);
@@ -49,7 +51,7 @@ export function CalculadoraProvider({children}: CalculadoraProviderProps) {
         }
         
         var timer_fim = Date.now()
-        const timer =  (timer_fim -timer_inicio)+1;
+        const timer =  (timer_fim -timer_inicio);
         const duodigito = valor*i;
         setValor(valor);
         setDuodigito(duodigito);
@@ -61,15 +63,18 @@ export function CalculadoraProvider({children}: CalculadoraProviderProps) {
 
 
     function exibir_resposta(){
-        var size = listaHistoricos.unshift(<div>Menor duodigito de {valor}: {duodigito}. Cálculo: {timer} milésimos.</div>)
-        if(size>4){
-            listaHistoricos.pop()
-        };
-        setListaHistoricos(listaHistoricos)
+        setOperacoes(operacoes+1)
+        if(operacoes>0){
+            var size = listaHistoricos.unshift(<div>Menor duodigito de {valor}: {duodigito}. Cálculo: {timer} ms.</div>)
+            if(size>5){
+                listaHistoricos.pop()
+            };
+            setListaHistoricos(listaHistoricos)
+            }
         setJaCalculou(true);
     }
 
     return(
-        <CalculadoraContext.Provider value={{calcular, duodigito, valor, timer, jaCalculou, listaHistoricos}}>
+        <CalculadoraContext.Provider value={{calcular, operacoes, duodigito, valor, timer, jaCalculou, listaHistoricos}}>
             {children}
         </CalculadoraContext.Provider>)}

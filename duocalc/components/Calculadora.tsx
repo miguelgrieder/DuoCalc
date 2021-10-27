@@ -19,7 +19,7 @@ export function Calculadora() {
     <div className= {styles.calculadoraContainer}> 
         <h1> Calculadora</h1>
             <h2>Escreva um número maior que 100:</h2>
-            <input type="text" placeholder="digite"/>
+            <input type="number" placeholder="digite"/>
             <button type="button" className={`${styles.calcularButton} `}  onClick={getInput}>
                 Calcular
             </button>
@@ -27,7 +27,7 @@ export function Calculadora() {
             { jaCalculou ? (
                 <div>
             <div> O menor duodigito múltiplo de {valor} é {duodigito}.</div>
-            <div>Tempo para cálculo: {timer} milésimos.</div></div>):
+            <div>Tempo para cálculo: {timer} ms.</div></div>):
             (<div>Calcule para exibir os dados!</div>)}
         
             
